@@ -7,36 +7,7 @@
     .then(function(){return $.ajax('./js/swiper.min.js')})
     .then(function(){
         var imagelist = [
-            "aidistrict_base.jpg",
-            "aisland_buildings.jpg",
-            "aisland.jpg",
-            "bg_btm.jpg",
-            "kv_m.jpg",
-            "aisland_buildings_active.png",
-            "heatmap_bg_world.png",
-            "ic_companies.png",
-            "aisland_buildings_alibaba.png",
-            "aisland_buildings_ibm.png",
-            "aisland_buildings_ms.png",
-            "aisland_buildings_pp.png",
-            "aisland_buildings_seed.png",
-            "aidistrict_industrial_aisland.png",
-            "aidistrict_industrial_inodev1.png",
-            "aidistrict_industrial_inodev2.png",
-            "aidistrict_scene_application.png",
-            "aidistrict_scene_community.png",
-            "aidistrict_scene_urban.png",
-            "aidistrict_support_education.png",
-            "aidistrict_support_exhibition.png",
-            "aidistrict_support_research.png",
-            "aidistrict_support_sciencehall.png",
-            "aidistrict_support_talenthub.png",
-            "aisland_application_driving_off.png",
-            "aisland_application_dron-air_off.png",
-            "aisland_application_dron-aqua_off.png",
-            "aisland_application_dron-land_off.png",
-            "aisland_application_energy_off.png",
-            "aisland_application_irrigation_off.png",
+            ""
         ],
         imagePath = "./images/";
 
