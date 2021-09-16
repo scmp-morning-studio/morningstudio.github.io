@@ -382,6 +382,19 @@
                 height:0%;
                 background-color: #fff;
 
+                &:before {
+                    position: absolute;
+                    bottom:0px;
+                    left:0%;
+                    transform: translateY(50%);
+                    content:"";
+                    display: block;
+                    width:0px;
+                    height:1px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                }
+
                 &:after {
                     position: absolute;
                     bottom:0;
@@ -398,6 +411,12 @@
                 @include media($mobile){
                     bottom:inherit;
                     top:0;
+
+                    &:before {
+                        bottom:inherit;
+                        top:0;
+                        transform:translateY(-50%);
+                    }
 
                     &:after {
                         bottom:inherit;
@@ -441,14 +460,15 @@
         }
 
         &.hotspot-zj {
-            left:420px;
-            bottom:200px;
+            z-index: 99;
+            left:428px;
+            bottom:190px;
             height:190px;
 
             @include media($mobile){
-                left:75%;
+                left:76%;
                 bottom:inherit;
-                top:20.5%;
+                top:19.5%;
                 height:150px;
             }
 
@@ -532,12 +552,45 @@
         }
 
         &.hotspot-taiwan {
-            left:427px;
+            left:430px;
             bottom:180px;
             height:329px;
 
+            .heatmap-hotspot-inner {
+                margin-right:24px;
+                @include media($mobile){
+                    margin-right:28px;
+                }
+            }
+
+            .hotspot-line {
+                &:before {
+                    left:-13px;
+                }
+
+                &:after {
+                    margin-left:-13px;
+                }
+
+                @include media($mobile){
+                    &:before {
+                        left:0px;
+                    }
+                    &:after {
+                        margin-left:0px;
+                    }
+                }
+            }
+
+            .hotspot-circle {
+                margin-left:-13px;
+                @include media($mobile){
+                    margin-left:0;
+                }
+            }
+
             @include media($mobile){
-                left:76.5%;
+                left:73.5%;
                 bottom:inherit;
                 top:23%;
                 height:215px;
@@ -596,7 +649,7 @@
                 }
 
                 .hotspot-circle {
-                    $circleS:30px;
+                    $circleS:20px;
                     width:$circleS;
                     height:$circleS;
 
@@ -611,6 +664,38 @@
                         $circleS:15px;
                         width:$circleS;
                         height:$circleS;
+                    }
+                }
+            }
+
+            &.hotspot-zj {
+                .heatmap-hotspot-inner {
+                    .hotspot-circle {
+                        $circleS:22px;
+                        width:$circleS;
+                        height:$circleS;
+
+                        @include media($mobile){
+                            $circleS:20px;
+                            width:$circleS;
+                            height:$circleS;
+                        }
+                    }
+                }
+            }
+
+            &.hotspot-taiwan {
+                .heatmap-hotspot-inner {
+                    .hotspot-line {
+                        &:before {
+                            width:14px;
+                            @include ani-select(width 0.6s ease-in-out);
+                            transition-delay:2.5s;
+
+                            @include media($mobile){
+                                width:0px;
+                            }
+                        }
                     }
                 }
             }
@@ -786,7 +871,7 @@
     .swiper-button-prev {
         background: url('#{$img}slide-arrow_left.png') center center no-repeat;
         background-size:8px 14px;
-        
+
     }
 
     .swiper-button-next {
@@ -807,7 +892,7 @@
             &.swiper-pagination-bullet-active {
                 -webkit-box-shadow: 0px 0px 10px 2px rgba(90,187,255,1);
                 -moz-box-shadow: 0px 0px 10px 2px rgba(90,187,255,1);
-                box-shadow: 0px 0px 10px 2px rgba(90,187,255,1); 
+                box-shadow: 0px 0px 10px 2px rgba(90,187,255,1);
             }
         }
     }
@@ -1513,7 +1598,7 @@ $color-off:#303d5f;
             box-shadow: inset 0px 0px 35px 2px rgba(0,5,19,0.6);
         }
 
-       
+
 
         .gird-frame-line {
             position: absolute;
@@ -2264,7 +2349,7 @@ $color-off:#303d5f;
                     max-width:300px;
                 }
             }
-            
+
 
             .district-nav-remark {
                 @include media($mobile){

@@ -59,7 +59,7 @@
                         place : "Zhangjiang AIsland",
                         detail: [
                             {
-                                li:"300 billion yuan (US$46.4 billion)<br class='br767'/> digital economy by 2022"
+                                li:"250 billion yuan (US$38.42 billion)<br class='br767'/> digital economy by 2022"
                             },
                             {
                                 li:"More than 100 companies"
